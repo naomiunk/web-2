@@ -4,63 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTW App Template</title>
-
-   
-    <!-- example for dark theme styling when using tailwind cdn -->
+    <title>Subbmitted</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /*examples for dark/light themes*/
         .dark .dark\:text-white {
             color: #fff;
         }
-        .dark .dark\:bg-gray-800 {
-            background-color: #1f2937;
-        }
+
         .light .light\:text-black {
             color: #000;
         }
 
-        /*add your custom css rules here*/
+        .dark .dark\:bg-gray-800 {
+            background-color: #1f2937;
+        }
+
+        .dark .dark\:border-gray-700 {
+            border-color: #4b5563;
+        }
+        td:not(:first-child){
+            text-align: right;
+        }
+        td{
+            border-bottom: 1px solid #e2e8f0;
+        }
     </style>
 </head>
 
-<body class="dark:text-white light:text-black">
-
-    <div class="w-[200px] m-auto">
-        <button onClick="alert('hello Braude')">Click me</button>
-        
-        </div>
-
-    <!-- your app code goes here -->
-
-    <!-- special scripts for integration in MTW gallery - must be placed at the bottom of the HTML after your code -->
-    <script>
-        // custom config for the MTW app 
-        const mtwAppConfig = {
-            border: true // app border in the MTW page                    
-        }
-        
-    
-        ///////////////////////////////////////////////////////
-        // implement this functions in order to use private API        
-        const sendPrivateApiRequest = async () => {
-            // your code here:
-            // sendRequestToParent({ cat: 'getAssets' })
-        }        
-
-        const acceptPrivateApiResponse = async (data) => {
-            // process received data here:
-            // console.log(data)
-        }
-
-        // use this in order to send on document load
-        document.addEventListener('DOMContentLoaded', () => {
-            // your code here:
-            //sendRequestToParent({ method: 'getAssets' })
-        })
-
-    </script>
-    <script src="https://morethanwallet.com/appstore/index.js"></script>
+<body class="pb-6">
+    <div class="max-w-[300px] mx-auto px-4 dark:text-white light:text-black">
+        <div class="text-2xl py-6">Subbmitted</div>
+        <table class="w-full" id="price-table"></table>
+    </div>
+    <script src="./inc/script.js"></script>
+    <script src="./inc/index.js"></script>
 </body>
 
 </html>
