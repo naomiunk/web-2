@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dark .dark\:text-white {
+            color: #fff;
+        }
+
+        .light .light\:text-black {
+            color: #000;
+        }
+
+        .dark .dark\:bg-gray-800 {
+            background-color: #1f2937;
+        }
+
+        .dark .dark\:border-gray-700 {
+            border-color: #4b5563;
+        }
+        td:not(:first-child){
+            text-align: right;
+        }
+        td{
+            border-bottom: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+
+<body class="pb-6">
+    <div class="max-w-[300px] mx-auto px-4 dark:text-white light:text-black">
+        <div class="text-2xl py-6">Subbmitted</div>
+        <table class="w-full" id="price-table"></table>
+    </div>
+          <p>2</p>
+    <script src="./inc/script.js"></script>
+    <script src="./inc/index.js"></script>
+</body>
+
+</html>
